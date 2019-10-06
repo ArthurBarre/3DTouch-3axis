@@ -10,10 +10,27 @@
 
 <body>
   <div id="app">
-    <p id="valueZ">Value of 3d touch</p>
+    <span id="valueX"></span>
+    <span id="valueY"></span>
   </div>
+
   <script src="pressure.js"></script>
   <script src="main.js"></script>
 </body>
+<style>
+  span {
+    position: absolute;
+  }
+
+  #valueX {
+    display: block;
+    margin-top: 50px;
+  }
+
+  #app {
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
 
 </html>
