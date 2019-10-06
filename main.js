@@ -14,7 +14,7 @@ var forceValue = "";
 //   }
 // });
 
-app.addEventListener("touchmove", handleClickPosition, false);
+app.addEventListener("click", handleClickPosition, false);
 
 function handleClickPosition(e) {
   let y = e.clientY;
