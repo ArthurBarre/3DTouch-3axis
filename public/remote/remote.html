@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>3d touch | 3 axis</title>
+
+</head>
+
+<body>
+  <section id="app">
+    <div>
+      <span id="valueX"></span>
+      <span id="valueY"></span>
+      <span id="valueXm"></span>
+      <span id="valueYm"></span>
+        <span id="valueZ"></span>
+    </div>
+
+  </section>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="pressure.js"></script>
+  <script src="remote.js"></script>
+</body>
+<style>
+  body {
+    overflow: hidden;
+    margin: 0;
+  }
+
+  div {
+    position: absolute;
+  }
+
+  div {
+    margin-top: 100px;
+  }
+
+  #valueX {
+    display: block;
+    margin-top: 50px;
+  }
+
+  #valueXm {
+    display: block;
+    margin-top: 100px;
+  }
+
+  #app {
+    width: 100vw;
+    height: 100vh;
+  }
+</style>
+
+</html>
