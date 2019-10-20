@@ -6,21 +6,49 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        div {
+            position: absolute;
+        }
+
+        div {
+            margin-top: 100px;
+        }
+
+
+
+        #app {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
 </head>
 
 <body>
 <div id="app">
     <span id="valueX"></span>
     <span id="valueY"></span>
-    <span id="valueXm"></span>
-    <span id="valueYm"></span>
+    <span id="valueZ"></span>
 </div>
 <script src="/socket.io/socket.io.js"></script>
 <script>
     var body = document.getElementById('app');
     var x = document.getElementById('valueX');
+    var y =  document.getElementById('valueY');
+    var z =  document.getElementById('valueZ');
     var socket = io.connect();
   socket.on('positionUpdate', function(data){
+    var {X,Y,Z} = data;
+        x.textContent="X = "+X;
+        y.textContent="Y = "+Y;
+        z.textContent="Z = "+Z;
     console.log(data);
   });
 </script>
