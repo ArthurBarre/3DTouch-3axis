@@ -1,0 +1,50 @@
+body {
+  overflow: hidden;
+  margin: 0;
+}
+
+div {
+  position: absolute;
+}
+
+div {
+  margin-top: 100px;
+}
+
+#valueX {
+  display: block;
+  margin-top: 50px;
+}
+
+#valueXm {
+  display: block;
+  margin-top: 100px;
+}
+
+#app {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.charts{
+  display: flex;
+  flex-direction: column;
+}
+.chart-x{
+  width:200px;
+  height:30px;
+  background-color: lightblue;
+}
+
+.chart-y{
+  width:200px;
+  height:30px;
+  background-color: lightcoral;
+}
+
+.chart-z{
+  width:200px;
+  height:30px;
+  background-color: lightgreen;
+}
