@@ -29,8 +29,6 @@ container.addEventListener("mousemove", drag, false);
 Pressure.set(app, {
   change: function (force) {
     Zpos = force;
-    console.log(force);
-
   }
 });
 function dragStart(e) {
@@ -71,8 +69,7 @@ function drag(e) {
     let Xpos = Xraw / width;
     let Yraw = currentY + (height / 2);
     let Ypos = Yraw / height;
-
-    send3DPositions(Xpos, Ypos, 0);
+    send3DPositions(Xpos, Ypos, Zpos);
     setTranslate(currentX, currentY, dragItem);
   }
 }
