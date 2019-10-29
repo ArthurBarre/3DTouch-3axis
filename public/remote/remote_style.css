@@ -2,49 +2,37 @@ body {
   overflow: hidden;
   margin: 0;
 }
-
-div {
+.values{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  justify-content: space-between;
 }
-
-div {
-  margin-top: 100px;
+.values > span{
+  color:white
 }
-
-#valueX {
-  display: block;
-  margin-top: 50px;
-}
-
-#valueXm {
-  display: block;
-  margin-top: 100px;
+#item {
+  width: 35px;
+  height: 35px;
+  background-color: rgb(245, 230, 99);
+  border: 10px solid rgba(136, 136, 136, .5);
+  border-radius: 50%;
+  touch-action: none;
+  user-select: none;
 }
 
 #app {
   width: 100vw;
   height: 100vh;
+  background-color: #333;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 7px;
+  touch-action: none;
 }
-.charts{
-  display: flex;
-  flex-direction: column;
-}
-.chart-x{
-  width:200px;
-  height:30px;
-  background-color: lightblue;
-}
-
-.chart-y{
-  width:200px;
-  height:30px;
-  background-color: lightcoral;
-}
-
-.chart-z{
-  width:200px;
-  height:30px;
-  background-color: lightgreen;
+.canvas{
+  display: block;
 }

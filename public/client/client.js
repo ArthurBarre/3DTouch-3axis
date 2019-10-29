@@ -6,7 +6,9 @@ var y_witness = document.getElementById('y');
 var z_witness = document.getElementById('z');
 var socket = io.connect();
 socket.on('positionUpdate', function (data) {
-  var { X, Y, Z } = data;
+  let X = data[0];
+  let Y = data[1];
+  let Z = data[3];
   x.textContent = "X = " + X;
   x_witness.style.width = X * 300 + 'px';
   y.textContent = "Y = " + Y;
