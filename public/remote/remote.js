@@ -7,6 +7,7 @@ var container = document.querySelector("#app");
 var body = document.querySelector('body');
 var socket = io.connect();
 var width = body.clientWidth;
+
 console.log('width: ', width);
 var height = window.innerHeight;
 var forceValue = Number;
@@ -15,6 +16,7 @@ var currentX;
 var currentY;
 var initialX;
 var initialY;
+var Zpos = 0;
 var xOffset = 0;
 var yOffset = 0;
 
@@ -61,12 +63,17 @@ function drag(e) {
     xOffset = currentX;
     yOffset = currentY;
 
+    Pressure.set(app, {
+      change: function (force) {
+        Zpos = force
+      }
+    });
     let Xraw = currentX + (width / 2);
     let Xpos = Xraw / width;
     let Yraw = currentY + (height / 2);
     let Ypos = Yraw / height;
 
-    send3DPositions(Xpos, Ypos, forceValue);
+    send3DPositions(Xpos, Ypos, Zpos);
     setTranslate(currentX, currentY, dragItem);
   }
 }
@@ -82,12 +89,7 @@ function dragEnd(e) {
   active = false;
 }
 
-Pressure.set(app, {
-  change: function (force) {
-    forceValue = force;
-    valueZ.innerHTML = forceValue;
-  }
-});
+
 
 
 function send3DPositions(x, y, z) {
