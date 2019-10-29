@@ -36,8 +36,8 @@ function convertValue(x, y,z) {
   let position = {X,Y,Z};
   valueXm.innerHTML = "x modified = " + X;
   valueYm.innerHTML = "y modified = " + Y;
-  x_witness.style.width = X * 500  +'px';
-  y_witness.style.width = Y * 500  +'px';
-  z_witness.style.width = Z * 500  +'px';
+  x_witness.style.width = X *'100vw';
+  y_witness.style.width = Y  *'100vw';
+  z_witness.style.width = Z  *'100vw';
   socket.emit('positionUpdate',position);
 }

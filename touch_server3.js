@@ -22,6 +22,6 @@ io.on('connection', function(client) {
 });
 
 //start our web server and socket.io server listening
-server.listen(3000, function(){
-  console.log('listening on *:3000');
+server.listen(1234, function(){
+  console.log('listening on *:1234');
 });
