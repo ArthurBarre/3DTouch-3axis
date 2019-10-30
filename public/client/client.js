@@ -18,3 +18,13 @@ socket.on('positionUpdate', function (data) {
   z.textContent = "Z = " + Z;
   z_witness.style.width = Z * 300 + 'px';
 });
+
+var position;
+socket.on('positionUpdate', function (data) {
+  console.log('data: ', data);
+  var X = 1;
+  var Y = 2;
+  var Z = 3;
+  //data[2];
+  position = { X, Y, Z }
+})

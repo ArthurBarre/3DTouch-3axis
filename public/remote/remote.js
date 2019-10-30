@@ -57,12 +57,18 @@ function drag(e) {
       currentX = e.clientX - initialX;
       currentY = e.clientY - initialY;
     }
-    // if (currentX < 0 - (width / 2)) {
-    //   currentX = (width / 2);
-    // }
-    // if (currentY < 0 - (height / 2)) {
-    //   currentY = (height / 2)
-    // }
+    if (currentX < -(width / 2)) {
+      currentX = -(width / 2);
+    }
+    if (currentY < - (height / 2)) {
+      currentY = -(height / 2)
+    }
+    if (currentX > (width / 2)) {
+      currentX = (width / 2)
+    }
+    if (currentY > (height / 2)) {
+      currentY = (height / 2)
+    }
     xOffset = currentX;
     yOffset = currentY;
     let Xraw = currentX + (width / 2);

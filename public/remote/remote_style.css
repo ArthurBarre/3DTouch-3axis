@@ -30,7 +30,6 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  border-radius: 7px;
   touch-action: none;
 }
 .canvas{
