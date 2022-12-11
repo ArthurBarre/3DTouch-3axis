@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/ArthurBarre/3DTouch-3axis#readme",
   "dependencies": {
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "pressure": "^2.1.2",
     "socket.io": "^2.3.0"
   }
